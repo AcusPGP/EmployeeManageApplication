@@ -2,8 +2,9 @@
 
 ### Object Oriented Programming and JavaFX
 
-- Run the application: Application (File path: src/main/java/pham/phuc/employee_data/Application.java)
+- GitHub link: https://github.com/AcusPGP/EmployeeManageApplication/tree/222c7b437581e2d73be56c56f0f0d2bc4214858a
 
+- Run the application: Application (src/main/java/pham/phuc/employee_data/Application.java)
 
 - Functions in the application:
 

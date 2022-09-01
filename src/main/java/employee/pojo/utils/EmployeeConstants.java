@@ -12,7 +12,7 @@ public final class EmployeeConstants {
     }
 
     public static final String CHOOSE_FUNCTION = "Please choose an option: ";
-    public static final String LIST_PATH = "/Users/macbook/OOPProjects/Employee_Data/list.txt";
+    public static final String LIST_PATH = "list.txt";
     public static final String INVALID_OUTPUT = "Invalid! Please choose an option in the below menu: ";
 
     public static final String ABSOLUTE_OBJECT_PATH = objectPath();

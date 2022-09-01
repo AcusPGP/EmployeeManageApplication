@@ -43,8 +43,6 @@ public class Manage {
                 engineer.show();
             }
             case "3" -> showAll();
-
-            //case "4" -> showObject();
         }
     }
 
@@ -132,20 +130,4 @@ public class Manage {
         }
     }
 }
-
-    /**
-     *
-    public static void showObject() {
-        try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(EmployeeConstants.ABSOLUTE_OBJECT_PATH));
-            // Read object from file
-            Person per = (Person) ois.readObject();
-            // Print object
-            System.out.println(per);
-            ois.close();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-     */
 
