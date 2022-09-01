@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pham.phuc.employee_data.Edit">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+        <Pane prefHeight="480.0" prefWidth="810.0" style="-fx-border-color: Black;">
+            <children>
+                <Label alignment="CENTER" layoutX="287.0" layoutY="-1.0" prefHeight="30.0" prefWidth="250.0" text="Editing Employee Information" textAlignment="CENTER" textFill="RED">
+                    <font>
+                        <Font name="Helvetica" size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="14.0" layoutY="88.0" prefHeight="26.0" prefWidth="100.0" text="Show options:" textAlignment="CENTER">
+                    <font>
+                        <Font name="Helvetica" size="14.0" />
+                    </font>
+                </Label>
+                <Button layoutX="310.0" layoutY="86.0" mnemonicParsing="false" onAction="#onShowOptionButtonClick" prefHeight="30.0" prefWidth="130.0" text="Show list" textFill="BLUE">
+                    <font>
+                        <Font name="Helvetica" size="15.0" />
+                    </font>
+                </Button>
+                <Line endX="710.0" layoutX="99.0" layoutY="29.0" startX="-98.0" />
+                <ComboBox fx:id="showOption" layoutX="114.0" layoutY="86.0" onMouseClicked="#comboBoxShowOption" prefHeight="30.0" prefWidth="180.0" />
+                <Line endX="100.0" endY="-12.5" layoutX="358.0" layoutY="140.0" startX="100.0" startY="-65.0" />
+                <Button layoutX="474.0" layoutY="86.0" mnemonicParsing="false" onAction="#onSearchIDButtonClick" prefHeight="30.0" prefWidth="130.0" text="Search ID" textFill="BLUE">
+                    <font>
+                        <Font name="Helvetica" size="15.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="idSearch" layoutX="617.0" layoutY="86.0" prefHeight="30.0" promptText="Please input an ID" />
+                <TableView fx:id="listTableView" layoutX="18.0" layoutY="165.0" onMouseClicked="#editableRow" prefHeight="139.0" prefWidth="774.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="200.0" text="NAME" />
+                        <TableColumn fx:id="ageColumn" prefWidth="60.0" text="AGE" />
+                        <TableColumn fx:id="addressColumn" prefWidth="212.0" text="ADDRESS" />
+                        <TableColumn fx:id="typeColumn" prefWidth="120.0" text="TYPE" />
+                        <TableColumn fx:id="lv_degreeColumn" prefWidth="121.0" text="LEVEL/DEGREE" />
+                    </columns>
+                </TableView>
+                <Line endX="710.0" layoutX="99.0" layoutY="74.0" startX="-98.0" />
+                <Button layoutX="440.0" layoutY="37.0" mnemonicParsing="false" onAction="#onExitButtonCLick" prefHeight="30.0" prefWidth="130.0" text="Exit" textFill="RED">
+                    <font>
+                        <Font name="Helvetica" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="71.0" layoutY="37.0" mnemonicParsing="false" onAction="#onAddReturnClick" prefHeight="30.0" prefWidth="130.0" text="Return">
+                    <font>
+                        <Font name="Helvetica" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="253.0" layoutY="37.0" mnemonicParsing="false" onAction="#onMenuButtonClick" prefHeight="30.0" prefWidth="130.0" text="Menu" textFill="GREEN">
+                    <font>
+                        <Font name="Helvetica" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="622.0" layoutY="37.0" mnemonicParsing="false" onAction="#onCommentButtonClick" prefHeight="30.0" prefWidth="130.0" text="Comment" textFill="BROWN">
+                    <font>
+                        <Font name="Helvetica" size="15.0" />
+                    </font>
+                </Button>
+                <Line endX="710.0" layoutX="99.0" layoutY="128.0" startX="-98.0" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/Return.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="222.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/Menu.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="412.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/Exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="593.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo/Comment.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="316.0" layoutY="134.0" prefHeight="26.0" prefWidth="193.0" style="-fx-border-color: red;" text="Please choose a row to edit" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Helvetica" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="5.0" layoutY="315.0" prefHeight="26.0" prefWidth="100.0" text="Edit line:" textAlignment="CENTER">
+               <font>
+                  <Font name="Helvetica" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editLine" layoutX="87.0" layoutY="313.0" prefHeight="30.0" prefWidth="340.0" promptText="Old line..." />
+            <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="113.0" text="New ADDRESS: " textAlignment="CENTER">
+               <font>
+                  <Font name="Helvetica" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ID" layoutX="86.0" layoutY="347.0" prefHeight="30.0" prefWidth="106.0" promptText="New ID" />
+            <TextField fx:id="NAME" layoutX="86.0" layoutY="380.0" prefHeight="30.0" prefWidth="240.0" promptText="New NAME" />
+            <TextField fx:id="AGE" layoutX="86.0" layoutY="413.0" prefHeight="30.0" prefWidth="180.0" promptText="New AGE" />
+            <TextField fx:id="ADDRESS" layoutX="114.0" layoutY="446.0" prefHeight="30.0" prefWidth="316.0" promptText="New ADDRESSS" />
+            <Button layoutX="196.0" layoutY="347.0" mnemonicParsing="false" onAction="#idSuggestion" prefHeight="30.0" prefWidth="130.0" text="Suggesting ID" textFill="BLUE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="newLine" layoutX="452.0" layoutY="348.0" prefHeight="30.0" prefWidth="340.0" promptText="New line..." />
+            <ComboBox fx:id="comboBoxType" layoutX="330.0" layoutY="380.0" onMouseClicked="#comboBoxType" prefHeight="30.0" prefWidth="100.0" promptText="New type" />
+            <ComboBox fx:id="comboBoxLevelDegree" layoutX="271.0" layoutY="413.0" onMouseClicked="#comboBoxLevelDegree" prefHeight="30.0" prefWidth="159.0" promptText="New level/degree" />
+            <Line endX="710.0" layoutX="99.0" layoutY="309.0" startX="-98.0" />
+            <Line endX="100.0" endY="73.0" layoutX="340.0" layoutY="406.0" startX="100.0" startY="-96.5" />
+            <Label alignment="CENTER" layoutX="452.0" layoutY="315.0" prefHeight="26.0" prefWidth="100.0" text="New line:" textAlignment="CENTER">
+               <font>
+                  <Font name="Helvetica" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="557.0" layoutY="314.0" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="30.0" prefWidth="130.0" text="Confirm" textFill="BLUE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="557.0" layoutY="405.0" mnemonicParsing="false" onAction="#onEditAndAddButtonClick" prefHeight="47.0" prefWidth="130.0" text="Edit and Add" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="347.0" mnemonicParsing="false" onAction="#onIDButtonClick" prefHeight="30.0" prefWidth="74.0" text="ID" textFill="BLUE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="380.0" mnemonicParsing="false" onAction="#onNameButtonClick" prefHeight="30.0" prefWidth="74.0" text="NAME" textFill="BLUE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="413.0" mnemonicParsing="false" onAction="#onAgeButtonClick" prefHeight="30.0" prefWidth="74.0" text="AGE" textFill="BLUE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="446.0" mnemonicParsing="false" onAction="#onAddressButtonClick" prefHeight="30.0" prefWidth="100.0" text="ADDRESS" textFill="BLUE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="330.0" layoutY="347.0" mnemonicParsing="false" onAction="#onSpecialButtonClick" prefHeight="30.0" prefWidth="100.0" text="Special" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+    </children>
+</VBox>
