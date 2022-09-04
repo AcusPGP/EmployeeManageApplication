@@ -132,7 +132,7 @@ module pham.phuc.employee_data {
 - To run the program, go to src/main/java/pham/phuc/employee_data/Application.java.
 
 -----------------------------------
-### Operation illustration pictures
+### Operating illustration pictures
 
 - Functions exist in the application's menu: Add, Show, Edit, Delete, Comment, Exit
 
